@@ -1,3 +1,6 @@
+//By Ujjwal Malhotra
+//Mail-ujjwal18vit@gmail.com
+
 const http=require('http');
 const fs=require('fs');
 const url=require('url');
@@ -9,11 +12,8 @@ const products=JSON.parse(productsString);
 
 const server=http.createServer((req,res)=>{
 
-
     const path=url.parse(req.url,true);
     
-
-
     res.writeHead(200,{
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "OPTIONS, POST, GET, PUT, PATCH, DELETE",
@@ -49,7 +49,7 @@ const server=http.createServer((req,res)=>{
         }
         else if(req.method=="POST"){
 
-            console.log("its working");
+            console.log("POST REQ. Working");
 
 
             let body="";
